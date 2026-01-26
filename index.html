@@ -1,0 +1,56 @@
+import profileImage from "@/assets/profile-image.jpg";
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="section-container py-20 md:py-32">
+        <div className="animate-fade-up">
+          <h1 className="title-display text-foreground mb-6">
+            Hello, I'm Lara
+          </h1>
+          <p className="body-text max-w-2xl">
+            A creative soul passionate about design, storytelling, and bringing ideas to life. 
+            I believe in the power of simplicity and the beauty found in everyday moments.
+          </p>
+        </div>
+      </section>
+
+      {/* Image Section */}
+      <section className="section-container pb-16 md:pb-24">
+        <div className="animate-fade-up-delay">
+          <div className="image-frame">
+            <img 
+              src={profileImage} 
+              alt="Creative workspace with notebook, coffee, and plant" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="section-container pb-20 md:pb-32">
+        <div className="animate-fade-up-delay-2">
+          <h2 className="title-secondary text-foreground mb-6">
+            About Me
+          </h2>
+          <p className="body-text max-w-2xl">
+            With years of experience in crafting meaningful experiences, I've learned that 
+            the best work comes from curiosity and genuine connection. Every project is an 
+            opportunity to create something that resonates and inspires.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="section-container py-12 border-t border-border">
+        <p className="text-sm text-muted-foreground text-center">
+          © 2024 Lara. Made with care.
+        </p>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
