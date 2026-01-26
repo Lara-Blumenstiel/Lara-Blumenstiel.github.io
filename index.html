@@ -1,190 +1,91 @@
-/**
- * PERSONAL WEBSITE - HOME PAGE
- * 
- * To add your own images:
- * 1. Place your image file in the "src/assets" folder
- * 2. Import it at the top of this file like: import myImage from "@/assets/my-image.jpg";
- * 3. Use it in an <img> tag like: <img src={myImage} alt="description" />
- * 
- * To edit text: Simply change the text between the HTML tags
- * To change colors: Edit the src/index.css file
- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarah – Personal Website</title>
 
-// ----- IMAGE IMPORTS -----
-// Add your own images here by importing them from the assets folder
-// Example: import myPhoto from "@/assets/my-photo.jpg";
-import profileImage from "@/assets/profile-image.jpg";
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  <!-- Optional nice font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-      {/* ===== HERO SECTION ===== */}
-      {/* Main title and introduction text */}
-      <section className="section-container py-20 md:py-32">
-        <div className="animate-fade-up">
-          {/* Main Title - Change "Sarah" to your name */}
-          <h1 className="title-display text-foreground mb-6">
-            Hello, I'm Lara
-          </h1>
-          {/* Introduction paragraph - Edit this to describe yourself */}
-          <p className="body-text max-w-2xl">
-            I study biology at university of zurich
-          </p>
-        </div>
-      </section>
+  <!-- HERO -->
+  <section class="section hero">
+    <h1>Hello, I'm Sarah</h1>
+    <p class="intro">
+      A creative soul passionate about design, storytelling, and bringing ideas to life.
+      I believe in the power of simplicity and the beauty found in everyday moments.
+    </p>
+  </section>
 
-      {/* ===== MAIN IMAGE SECTION ===== */}
-      {/* Large feature image - Replace profileImage with your own imported image */}
-      <section className="section-container pb-16 md:pb-24">
-        <div className="animate-fade-up-delay">
-          <div className="image-frame">
-            {/* TO CHANGE THIS IMAGE: 
-                1. Import your image at the top of this file
-                2. Replace "profileImage" with your imported image name */}
-            <img 
-              src={profileImage} 
-              alt="Creative workspace with notebook, coffee, and plant" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ===== ABOUT SECTION ===== */}
-      {/* Second title and paragraph about your journey */}
-      <section className="section-container pb-20 md:pb-32">
-        <div className="animate-fade-up-delay-2">
-          {/* Section Title */}
-          <h2 className="title-secondary text-foreground mb-6">
-            About Me
-          </h2>
-          {/* About paragraph - Edit this to tell your story */}
-          <p className="body-text max-w-2xl">
-            With years of experience in crafting meaningful experiences, I've learned that 
-            the best work comes from curiosity and genuine connection. Every project is an 
-            opportunity to create something that resonates and inspires.
-          </p>
-        </div>
-      </section>
-
-      {/* ===== TWO IMAGES GRID ===== */}
-      {/* Two square images side by side with descriptions */}
-      <section className="section-container pb-20 md:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          {/* ----- IMAGE 1 ----- */}
-          <div className="space-y-3">
-            <div className="image-frame">
-              {/* TO ADD YOUR IMAGE:
-                  1. Import your image at the top: import image1 from "@/assets/your-image.jpg";
-                  2. Replace the grey div below with: <img src={image1} alt="description" className="w-full aspect-square object-cover" /> */}
-              <div className="aspect-square bg-muted flex items-center justify-center">
-                <span className="text-muted-foreground text-sm">Image 1</span>
-              </div>
-            </div>
-            {/* Description text for image 1 */}
-            <p className="text-sm text-muted-foreground">
-              Brief description of this project or image goes here.
-            </p>
-          </div>
-
-          {/* ----- IMAGE 2 ----- */}
-          <div className="space-y-3">
-            <div className="image-frame">
-              {/* TO ADD YOUR IMAGE:
-                  1. Import your image at the top: import image2 from "@/assets/your-image.jpg";
-                  2. Replace the grey div below with: <img src={image2} alt="description" className="w-full aspect-square object-cover" /> */}
-              <div className="aspect-square bg-muted flex items-center justify-center">
-                <span className="text-muted-foreground text-sm">Image 2</span>
-              </div>
-            </div>
-            {/* Description text for image 2 */}
-            <p className="text-sm text-muted-foreground">
-              Brief description of this project or image goes here.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ===== MY WORK SECTION ===== */}
-      {/* Bullet point list of your work/services */}
-      <section className="section-container pb-16 md:pb-24">
-        <div>
-          {/* Section Title */}
-          <h2 className="title-secondary text-foreground mb-8">
-            Publications
-          </h2>
-          {/* Bullet point list - Edit or add/remove items as needed */}
-          <ul className="space-y-4 max-w-2xl">
-            <li className="body-text flex items-start gap-3">
-              <span className="text-accent mt-1.5">•</span>
-              <span>Brand identity design for emerging startups</span>
-            </li>
-            <li className="body-text flex items-start gap-3">
-              <span className="text-accent mt-1.5">•</span>
-              <span>User experience research and strategy</span>
-            </li>
-            <li className="body-text flex items-start gap-3">
-              <span className="text-accent mt-1.5">•</span>
-              <span>Digital product design and prototyping</span>
-            </li>
-            <li className="body-text flex items-start gap-3">
-              <span className="text-accent mt-1.5">•</span>
-              <span>Creative direction for marketing campaigns</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* ===== PLACEHOLDER IMAGE SECTION ===== */}
-      {/* Another large image placeholder */}
-      <section className="section-container pb-20 md:pb-32">
-        <div className="image-frame">
-          {/* TO ADD YOUR IMAGE:
-              1. Import your image at the top
-              2. Replace the grey div below with an <img> tag */}
-          <div className="w-full aspect-video bg-muted flex items-center justify-center">
-            <span className="text-muted-foreground text-sm">Image placeholder</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== CONTACT SECTION ===== */}
-      {/* Call to action with your email address */}
-      <section className="section-container pb-20 md:pb-32">
-        <div className="text-center">
-          {/* Section Title */}
-          <h2 className="title-secondary text-foreground mb-6">
-            Let's Connect
-          </h2>
-          {/* Contact message */}
-          <p className="body-text max-w-xl mx-auto mb-8">
-            If you're interested in working together or just want to say hello, 
-            I'd love to hear from you. Feel free to reach out!
-          </p>
-          {/* Email link - Change to your real email address */}
-          <a 
-            href="mailto:hello@sarahdesigns.com" 
-            className="inline-block text-lg font-medium text-accent hover:underline underline-offset-4 transition-colors"
-          >
-            hello@sarahdesigns.com
-          </a>
-        </div>
-      </section>
-
-      {/* ===== FOOTER ===== */}
-      {/* Copyright notice at the bottom */}
-      <footer className="section-container py-12 border-t border-border">
-        {/* Change "Sarah" to your name and update the year if needed */}
-        <p className="text-sm text-muted-foreground text-center">
-          © 2024 Sarah. Made with care.
-        </p>
-      </footer>
-
+  <!-- MAIN IMAGE -->
+  <section class="section">
+    <div class="image-frame">
+      <img src="profile-image.jpg" alt="Creative workspace">
     </div>
-  );
-};
+  </section>
 
-export default Index;
+  <!-- ABOUT -->
+  <section class="section">
+    <h2>About My Journey</h2>
+    <p>
+      With years of experience in crafting meaningful experiences, I've learned that
+      the best work comes from curiosity and genuine connection. Every project is an
+      opportunity to create something that resonates and inspires.
+    </p>
+  </section>
+
+  <!-- TWO IMAGES -->
+  <section class="section grid">
+    <div>
+      <div class="image-placeholder">Image 1</div>
+      <p class="caption">Brief description of this project or image goes here.</p>
+    </div>
+
+    <div>
+      <div class="image-placeholder">Image 2</div>
+      <p class="caption">Brief description of this project or image goes here.</p>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section">
+    <h2>My Work</h2>
+    <ul class="work-list">
+      <li>Brand identity design for emerging startups</li>
+      <li>User experience research and strategy</li>
+      <li>Digital product design and prototyping</li>
+      <li>Creative direction for marketing campaigns</li>
+    </ul>
+  </section>
+
+  <!-- LARGE IMAGE -->
+  <section class="section">
+    <div class="image-wide">Image placeholder</div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section center">
+    <h2>Let's Connect</h2>
+    <p>
+      If you're interested in working together or just want to say hello,
+      I'd love to hear from you.
+    </p>
+    <a class="email" href="mailto:hello@sarahdesigns.com">
+      hello@sarahdesigns.com
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2024 Sarah. Made with care.
+  </footer>
+
+</body>
+</html>
