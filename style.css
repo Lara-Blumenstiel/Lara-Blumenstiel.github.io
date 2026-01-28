@@ -44,6 +44,14 @@ display: block;
 margin: 0 auto;
 }
 
+.large-img {
+  max-width: 90%; /* adjust size as you like */
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
 .image-placeholder,
 .image-wide {
   background: #e5e5e5;
