@@ -52,6 +52,11 @@ margin: 0 auto;
   margin: 0 auto;
 }
 
+.image-frame.large-img {
+  max-width: 90% !important; /* override the 60% */
+}
+
+
 .image-placeholder,
 .image-wide {
   background: #e5e5e5;
